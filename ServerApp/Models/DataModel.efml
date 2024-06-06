@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore namespace="ServerApp" p1:name="DatabaseUtil" p1:Guid="9f855d6f-993d-4daf-85fe-b7d544836127" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Designation" entity-set="Designations" table="designation" schema="earthuniversity2023" p1:Guid="340fa97b-8bd6-424b-98ca-ee501107e09e">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="ed9c5396-78ee-4738-afd8-bf26b7ecf5b4">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="4f32b01a-fb4a-4361-9aef-b79e3dc84aac">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Employee" entity-set="Employees" table="employee" schema="earthuniversity2023" p1:Guid="bfc43a4f-430c-42c4-9f08-61069317a5c6">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="4c48b51b-0aa8-4b7b-bc8e-81b587b572dd">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Address" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ea7d7eeb-688a-490f-8973-40b6ee24e17a">
+      <column name="address" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Callingname" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="7b428d7f-8b2e-4898-b0bf-3f75b6c456c4">
+      <column name="callingname" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="57e09ed1-4e07-4012-8693-0901376c9fde">
+      <column name="description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="DesignationId" type="Int32" p1:ValidateRequired="true" p1:Guid="952192c7-8ef2-4322-ba5b-a72a931fa831">
+      <column name="designation_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Doassignment" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b4df4aad-b6d2-405f-b850-afa3971137b0">
+      <column name="doassignment" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="Dobirth" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ad8464ee-f27e-4759-a298-aede9b9463ce">
+      <column name="dobirth" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="Email" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="df152c9b-35e5-4361-a158-b43c6948185e">
+      <column name="email" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="EmpstatusId" type="Int32" p1:ValidateRequired="true" p1:Guid="bda6b46a-0ce8-410f-aa30-b2d143db6427">
+      <column name="empstatus_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="EmptypeId" type="Int32" p1:ValidateRequired="true" p1:Guid="d6aad145-e1b8-4417-a429-d8b3db5971f6">
+      <column name="emptype_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Fullname" type="String" p1:nullable="True" p1:ValidateMaxLength="150" p1:ValidateRequired="false" p1:Guid="8ae7e7c7-120c-4cf6-b8dc-77fde3580e5a">
+      <column name="fullname" not-null="False" length="150" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="GenderId" type="Int32" p1:ValidateRequired="true" p1:Guid="397cf8fb-b934-45e5-a236-d79c0afdbe61">
+      <column name="gender_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Land" type="String" p1:nullable="True" p1:ValidateMaxLength="10" p1:ValidateRequired="false" p1:Guid="ee50cc26-8489-477e-baed-1e7ea64c5400">
+      <column name="land" not-null="False" length="10" sql-type="char" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Mobile" type="String" p1:nullable="True" p1:ValidateMaxLength="10" p1:ValidateRequired="false" p1:Guid="a1f241dc-398f-4e15-9026-ff5315b601af">
+      <column name="mobile" not-null="False" length="10" sql-type="char" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Nic" type="String" p1:nullable="True" p1:ValidateMaxLength="12" p1:ValidateRequired="false" p1:Guid="12398869-f18c-4f5d-bdc1-afc4ce1b3bab">
+      <column name="nic" not-null="False" length="12" sql-type="char" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Number" type="String" p1:nullable="True" p1:ValidateMaxLength="4" p1:ValidateRequired="false" p1:Guid="155f16dd-c774-43d3-a97e-1d0e23699fa7">
+      <column name="number" not-null="False" length="4" sql-type="char" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="Photo" type="Blob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d1d0c27e-4f81-4233-a738-17b5f8c09a18">
+      <column name="photo" not-null="False" sql-type="longblob" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Empstatu" entity-set="Empstatus" table="empstatus" schema="earthuniversity2023" p1:Guid="3b014605-6dca-4b9d-add3-1df8a9c83a88">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="0e5319f3-8f3d-4190-b109-fc7eefaa2308">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="54ed8e89-205c-4869-8397-114f54579fe5">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Emptype" entity-set="Emptypes" table="emptype" schema="earthuniversity2023" p1:Guid="1d1c7ab5-89f9-4c1a-8dc2-d59d459d6d92">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="595ea7d6-a242-42ea-99b5-492b69bd2811">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="f14ab247-9c0e-4f6c-abe9-742ea3303880">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Gender" entity-set="Genders" table="gender" schema="earthuniversity2023" p1:Guid="a56db450-e16c-47c1-b18c-5ced1eaa4ea7">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="683bee36-9c2b-4876-ad24-7f56edceef15">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="39a9b482-30c2-49ad-869e-515cb17df4fe">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Module" entity-set="Modules" table="module" schema="earthuniversity2023" p1:Guid="c1dce608-5f40-4a7f-90d8-02a978d5419c">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="3e614538-ff58-49a2-a98f-b20c888c674d">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="41632498-a262-490a-b64a-d6a3b7110e8f">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Operation" entity-set="Operations" table="operation" schema="earthuniversity2023" p1:Guid="49506247-dfcb-4ffb-973e-3861f3a8548d">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="609572d9-b27f-4acf-9dca-89fdd1792919">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ModuleId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="eb358ba9-f352-48d6-9281-c67e2a71f502">
+      <column name="module_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="1db1657a-049a-426b-a74a-24ef46f986c0">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="OpetypeId" type="Int32" p1:ValidateRequired="true" p1:Guid="c35e96ef-6423-4c9c-a4df-5622cb1b00b7">
+      <column name="opetype_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Opetype" entity-set="Opetypes" table="opetype" schema="earthuniversity2023" p1:Guid="7dff6ea2-9da8-4b74-be01-2c4f41a8e51b">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="d6cf8307-5533-4fc6-92d7-f7fa80348a1a">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="9f6fcb8f-25f5-438c-9df9-f6bf3a0485c7">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Privilege" entity-set="Privileges" table="privilege" schema="earthuniversity2023" p1:Guid="1509746c-b225-464e-a786-0db4d5863e3b">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="fa640840-0b51-46df-82a5-a507ce26c74f">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Authority" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="ab80887c-65f5-45da-8c1e-85ba58f92f88">
+      <column name="authority" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="ModuleId" type="Int32" p1:ValidateRequired="true" p1:Guid="500f5c06-5992-4d24-9372-f7b506fc6d0f">
+      <column name="module_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="OperationId" type="Int32" p1:ValidateRequired="true" p1:Guid="c6529c41-833d-4a8b-ba1e-ab174faecacb">
+      <column name="operation_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="RoleId" type="Int32" p1:ValidateRequired="true" p1:Guid="f8e91058-4293-4262-b9c6-ebb7a6be5b5e">
+      <column name="role_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Role" entity-set="Roles" table="role" schema="earthuniversity2023" p1:Guid="2dfe4319-b748-4c6d-a83b-3b2df6021660">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="b368a37b-8fe8-48b3-ad00-d2a54e78105c">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="9c71bfda-fedb-41a8-9985-e5a03953568e">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="User" entity-set="Users" table="user" schema="earthuniversity2023" p1:Guid="667ea733-dbb2-447f-b030-8c2a26f93e91">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="e9b7d505-9584-4d92-a3a8-327ee8771fd4">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="11a3eaf9-b040-462b-bca3-1bea7014462e">
+      <column name="description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Docreated" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b367705f-46e4-456c-9573-221cf9968b54">
+      <column name="docreated" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="EmployeeId" type="Int32" p1:ValidateRequired="true" p1:Guid="8f074af1-b8c6-4406-ba48-325b431735cc">
+      <column name="employee_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Password" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="a17fe124-3726-44ea-8d99-79431fd72425">
+      <column name="`password`" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Salt" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="d067b3d5-4e41-4d33-857c-3dc6471a63dc">
+      <column name="salt" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Tocreated" type="Time" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2d021b22-6085-44d3-93fc-ba0aae00b4cb">
+      <column name="tocreated" not-null="False" sql-type="time" p1:unicode="False" />
+    </property>
+    <property name="Username" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="c51a9fa5-5c10-4085-a6de-00283a58f1d5">
+      <column name="username" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="UsestatusId" type="Int32" p1:ValidateRequired="true" p1:Guid="2d6143db-2bcc-4b94-a21b-1b595df692d2">
+      <column name="usestatus_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UsetypeId" type="Int32" p1:ValidateRequired="true" p1:Guid="3234e60d-9998-4976-a250-f6eb8ed2569a">
+      <column name="usetype_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Userrole" entity-set="Userroles" table="userrole" schema="earthuniversity2023" p1:Guid="d9d8a125-d0ac-451e-8b55-8c4eb0b746ca">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="53a15a63-a19c-4114-b7cc-fd748fbdffe2">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="RoleId" type="Int32" p1:ValidateRequired="true" p1:Guid="0af3644b-9fe9-4c3c-9b24-00dc240dc4dd">
+      <column name="role_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int32" p1:ValidateRequired="true" p1:Guid="6522a8ca-2360-4dd1-a581-cc9a170a86c1">
+      <column name="user_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Usestatu" entity-set="Usestatus" table="usestatus" schema="earthuniversity2023" p1:Guid="884423d6-4095-43d7-b6d3-7e96d8c0ae51">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="d256aaf3-e76c-44b9-b3e8-e7e6b354910c">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="4177e7bd-88f8-4053-91b2-aa28f0604dce">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="Usetype" entity-set="Usetypes" table="usetype" schema="earthuniversity2023" p1:Guid="4f1c0654-4c8e-4810-89ec-26bc1d96ea87">
+    <id name="Id" type="Int32" p1:setter-modifier="Private" value-generated="OnAdd" constructor-parameter="True" p1:ValidateRequired="true" p1:Guid="9dbf1f05-2d05-4513-8e78-2f6de50b5ec5">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="45" p1:ValidateRequired="false" p1:Guid="ef31c7d9-d786-40a8-aff8-a5f3e4fdc6af">
+      <column name="name" not-null="False" length="45" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <associations>
+    <association name="Designation_Employee" cardinality="OneToMany" p1:Guid="544d7ec7-b786-4225-836b-f70c593c7bf6">
+      <end1 multiplicity="One" name="Designation" class="Employee" relation-class="Designation" constrained="True" lazy="False" p1:Guid="ca3b27f5-d3aa-4442-97b0-31e7d8b2471e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Employees" class="Designation" relation-class="Employee" lazy="False" p1:Guid="3bd99202-f113-4040-989b-e274939cd7f6">
+        <property name="DesignationId" />
+      </end2>
+    </association>
+    <association name="Empstatu_Employee" cardinality="OneToMany" p1:Guid="61ff9dcb-fa9b-48cf-82c0-8d258e688d18">
+      <end1 multiplicity="One" name="Empstatu" class="Employee" relation-class="Empstatu" constrained="True" lazy="False" p1:Guid="85329a6b-7003-4b11-90ef-53321b7f79ff">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Employees" class="Empstatu" relation-class="Employee" lazy="False" p1:Guid="ccfb9b47-04de-4d91-805d-558686879f35">
+        <property name="EmpstatusId" />
+      </end2>
+    </association>
+    <association name="Emptype_Employee" cardinality="OneToMany" p1:Guid="2e0d2c3f-9191-417e-8d82-cb16ec874d60">
+      <end1 multiplicity="One" name="Emptype" class="Employee" relation-class="Emptype" constrained="True" lazy="False" p1:Guid="49926470-48cf-4d35-b71c-ee398e38ad27">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Employees" class="Emptype" relation-class="Employee" lazy="False" p1:Guid="c56b192f-666b-4f18-b5a3-366fe1f4354a">
+        <property name="EmptypeId" />
+      </end2>
+    </association>
+    <association name="Gender_Employee" cardinality="OneToMany" p1:Guid="230a4639-a949-4c26-a364-a2502f82ba98">
+      <end1 multiplicity="One" name="Gender" class="Employee" relation-class="Gender" constrained="True" lazy="False" p1:Guid="541237f0-fdea-491f-9be4-3cf702752de3">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Employees" class="Gender" relation-class="Employee" lazy="False" p1:Guid="3de4a298-6c4f-4337-ab7d-962c79041771">
+        <property name="GenderId" />
+      </end2>
+    </association>
+    <association name="Module_Operation" cardinality="OneToMany" p1:Guid="8be3393e-a883-42a2-9b9c-61293c34c3cb">
+      <end1 multiplicity="ZeroOrOne" name="Module" class="Operation" relation-class="Module" constrained="True" lazy="False" p1:Guid="bea53081-aeb8-4b71-8ab2-56a98eb22996">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Operations" class="Module" relation-class="Operation" lazy="False" p1:Guid="d56725fa-93ca-40c8-948a-7f20297395c5">
+        <property name="ModuleId" />
+      </end2>
+    </association>
+    <association name="Opetype_Operation" cardinality="OneToMany" on-delete="Restrict" p1:Guid="4e44397e-4681-40d7-b52d-bfbdb197405d">
+      <end1 multiplicity="One" name="Opetype" class="Operation" relation-class="Opetype" constrained="True" lazy="False" p1:Guid="ee0a8880-de3a-4c1d-bd46-5ace6fcd4306">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Operations" class="Opetype" relation-class="Operation" lazy="False" p1:Guid="a4bca1a5-d581-4f97-a1ca-00463613e95c">
+        <property name="OpetypeId" />
+      </end2>
+    </association>
+    <association name="Module_Privilege" cardinality="OneToMany" p1:Guid="ad5828a4-5dab-4c16-b168-9199b73e12e9">
+      <end1 multiplicity="One" name="Module" class="Privilege" relation-class="Module" constrained="True" lazy="False" p1:Guid="004b191f-d27a-446b-a43d-3c2d42ba0408">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Privileges" class="Module" relation-class="Privilege" lazy="False" p1:Guid="8ac981db-db5a-41af-89a8-be5245246e6c">
+        <property name="ModuleId" />
+      </end2>
+    </association>
+    <association name="Operation_Privilege" cardinality="OneToMany" on-delete="Restrict" p1:Guid="684e6681-3285-4f19-9216-fbaa37ab6aaf">
+      <end1 multiplicity="One" name="Operation" class="Privilege" relation-class="Operation" constrained="True" lazy="False" p1:Guid="e0bbbb2f-ebfc-4020-af2d-0c10dfe07087">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Privileges" class="Operation" relation-class="Privilege" lazy="False" p1:Guid="077d2351-aa25-45b9-8599-06eb6ad5201f">
+        <property name="OperationId" />
+      </end2>
+    </association>
+    <association name="Role_Privilege" cardinality="OneToMany" p1:Guid="f7634c44-d694-4cd5-813e-7a654b114379">
+      <end1 multiplicity="One" name="Role" class="Privilege" relation-class="Role" constrained="True" lazy="False" p1:Guid="72b18a3f-d305-4527-a0bb-8e1b08fb3ad2">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Privileges" class="Role" relation-class="Privilege" lazy="False" p1:Guid="51dc7407-d48f-412c-abfb-f716703b6698">
+        <property name="RoleId" />
+      </end2>
+    </association>
+    <association name="Employee_User" cardinality="OneToMany" p1:Guid="4956f99a-3ded-40fd-b099-8ee70e5f680e">
+      <end1 multiplicity="One" name="Employee" class="User" relation-class="Employee" constrained="True" lazy="False" p1:Guid="ef0df948-fd21-4b16-a2b7-015832791215">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Users" class="Employee" relation-class="User" lazy="False" p1:Guid="a67dadaa-a044-45fd-8c9b-3dfa4499605d">
+        <property name="EmployeeId" />
+      </end2>
+    </association>
+    <association name="Usestatu_User" cardinality="OneToMany" p1:Guid="b706a00a-64fa-4f73-af2c-4a49c566b3d4">
+      <end1 multiplicity="One" name="Usestatu" class="User" relation-class="Usestatu" constrained="True" lazy="False" p1:Guid="eb01c41f-f48e-4223-8b8f-5731fb71522e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Users" class="Usestatu" relation-class="User" lazy="False" p1:Guid="ae01ecf5-cc09-4c4f-b401-903ce850de6c">
+        <property name="UsestatusId" />
+      </end2>
+    </association>
+    <association name="Usetype_User" cardinality="OneToMany" p1:Guid="de836638-81be-4395-aaa6-5afd1f28db4d">
+      <end1 multiplicity="One" name="Usetype" class="User" relation-class="Usetype" constrained="True" lazy="False" p1:Guid="1aef37ba-32f7-42c3-a3c2-22907dfcf295">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Users" class="Usetype" relation-class="User" lazy="False" p1:Guid="08dd2b60-8d96-4d2a-a421-1fddc0f2f7c7">
+        <property name="UsetypeId" />
+      </end2>
+    </association>
+    <association name="Role_Userrole" cardinality="OneToMany" p1:Guid="419778f3-4d64-48bb-b646-8b7f07244ade">
+      <end1 multiplicity="One" name="Role" class="Userrole" relation-class="Role" constrained="True" lazy="False" p1:Guid="eb21b39f-3402-4a95-9667-3e5abcee8447">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Userroles" class="Role" relation-class="Userrole" lazy="False" p1:Guid="ec669993-0963-4ea4-aea1-491808a6540f">
+        <property name="RoleId" />
+      </end2>
+    </association>
+    <association name="User_Userrole" cardinality="OneToMany" p1:Guid="15769c8c-2b6f-4743-bbc4-c52138766551">
+      <end1 multiplicity="One" name="User" class="Userrole" relation-class="User" constrained="True" lazy="False" p1:Guid="df069fc1-195b-436f-aa9a-51a3b7e07efa">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Userroles" class="User" relation-class="Userrole" lazy="False" p1:Guid="496c7528-4188-49dc-805a-ceb45cd4badf">
+        <property name="UserId" />
+      </end2>
+    </association>
+  </associations>
+</efcore>
